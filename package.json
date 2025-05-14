@@ -2,6 +2,7 @@
   "name": "react-ci-checks",
   "version": "0.1.0",
   "private": true,
+  "type": "module", // 🟢 Add this line for ESM support
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -13,22 +14,19 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "lint": "eslint . --format html -o eslint-report.html"
- },
-{
-  "type": "module"
-}
-  
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint . --format html -o eslint-report.html"
   },
+  // 🔴 REMOVE this block if you're using eslint.config.js instead of legacy config
+  // "eslintConfig": {
+  //   "extends": [
+  //     "react-app",
+  //     "react-app/jest"
+  //   ]
+  // },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -43,10 +41,11 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",
+    "@babel/core": "^7.24.0",              // ✅ Add
+    "@babel/eslint-parser": "^7.24.0",     // ✅ Add
+    "@babel/preset-react": "^7.24.0",      // ✅ Add
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.5",
-    "globals": "^16.1.0",
-    "typescript-eslint": "^8.32.1"
+    "globals": "^16.1.0"
   }
 }
-
