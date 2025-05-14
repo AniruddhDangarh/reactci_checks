@@ -20,13 +20,6 @@
     "eject": "react-scripts eject",
     "lint": "eslint . --format html -o eslint-report.html"
   },
-  // 🔴 REMOVE this block if you're using eslint.config.js instead of legacy config
-  // "eslintConfig": {
-  //   "extends": [
-  //     "react-app",
-  //     "react-app/jest"
-  //   ]
-  // },
   "browserslist": {
     "production": [
       ">0.2%",
