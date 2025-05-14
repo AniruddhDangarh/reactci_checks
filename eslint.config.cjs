@@ -1,26 +1,38 @@
-// eslint.config.cjs
-const js = require("@eslint/js");
-const globals = require("globals");
-const reactPlugin = require("eslint-plugin-react");
+import js from "@eslint/js";
+import globals from "globals";
+import reactPlugin from "eslint-plugin-react";
 
-module.exports = [
+export default [
   {
-    files: ["**/*.js", "**/*.jsx"],
+    files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
       globals: {
         ...globals.browser,
-        ...globals.es2021
-      }
+        ...globals.node,
+      },
+      parser: require.resolve("@babel/eslint-parser"),
+      parserOptions: {
+        requireConfigFile: false,
+        babelOptions: {
+          presets: ["@babel/preset-react"],
+        },
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
     },
     plugins: {
-      react: reactPlugin
+      react: reactPlugin,
     },
     rules: {
-      ...js.configs.recommended.rules,
-      ...reactPlugin.configs.recommended.rules
-    }
-  }
+      // add your rules here
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+  },
 ];
-
