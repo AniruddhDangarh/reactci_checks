@@ -19,6 +19,10 @@
   "eject": "react-scripts eject",
   "lint": "eslint . --format html -o eslint-report.html"
  },
+{
+  "type": "module"
+}
+  
   "eslintConfig": {
     "extends": [
       "react-app",
