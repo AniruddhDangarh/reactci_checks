@@ -2,7 +2,7 @@
   "name": "react-ci-checks",
   "version": "0.1.0",
   "private": true,
-  "type": "module", // 🟢 Add this line for ESM support
+  "type": "module",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
