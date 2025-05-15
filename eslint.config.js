@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import globals from "globals";
 import reactPlugin from "eslint-plugin-react";
+import babelParser from "@babel/eslint-parser";
 
 export default [
   {
@@ -12,7 +13,7 @@ export default [
         ...globals.browser,
         ...globals.node,
       },
-      parser: "@babel/eslint-parser",
+      parser: babelParser,
       parserOptions: {
         requireConfigFile: false,
         babelOptions: {
@@ -27,7 +28,7 @@ export default [
       react: reactPlugin,
     },
     rules: {
-      // add your rules here
+      // your rules
     },
     settings: {
       react: {
