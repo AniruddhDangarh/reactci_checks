@@ -12,7 +12,7 @@ export default [
         ...globals.browser,
         ...globals.node,
       },
-      parser: require.resolve("@babel/eslint-parser"),
+      parser: "@babel/eslint-parser",
       parserOptions: {
         requireConfigFile: false,
         babelOptions: {
