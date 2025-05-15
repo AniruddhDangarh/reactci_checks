@@ -34,9 +34,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",
-    "@babel/core": "^7.24.0",              // ✅ Add
-    "@babel/eslint-parser": "^7.24.0",     // ✅ Add
-    "@babel/preset-react": "^7.24.0",      // ✅ Add
+    "@babel/core": "^7.24.0",              
+    "@babel/eslint-parser": "^7.24.0",     
+    "@babel/preset-react": "^7.24.0",      
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.1.0"
